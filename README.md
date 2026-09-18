@@ -3,11 +3,12 @@
 ## Project Title
 GreenReach Community Garden — Non-Profit Website (WEDE5020 Portfolio of Evidence)
 
-## Student Information
-- **Name:** Lindo
+## Student
+- **Name:** Lindokuhle Mtshali
 - **Student Number:** ST10233093
+- **GitHub Link:** github.com/lindokuhlemtshalibj@gmail.com/GreenReachWebsite  
 - **Module:** WEDE5020 (Web Development Introduction)
-- **Institution:** IIE
+
 
 ## Project Overview
 GreenReach Community Garden is a Johannesburg-based non-profit initiative promoting urban agriculture, food security, and community wellness. This repository contains the front-end website built for GreenReach as part of the WEDE5020 Portfolio of Evidence (POE). The site gives the organisation an online presence to recruit volunteers, collect donations, and share knowledge with the community.
