@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+  =========================================================
+  GreenReach Community Garden Website
+  Student: ST10233093 | Module: WEDE5020
+  Page: index.html (Homepage)
+  =========================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenReach Community Garden - Growing community wellness through urban gardening in Johannesburg.">
+    <title>GreenReach Community Garden</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ============ HEADER: site branding + main navigation ============ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <img src="images/logo.png" alt="GreenReach Community Garden logo">
+                <h1>GreenReach Community Garden</h1>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ MAIN: page-specific content ============ -->
+    <main>
+        <!-- Hero: two-column grid with responsive picture element -->
+        <div class="hero">
+            <div>
+                <span class="badge">Johannesburg NPO</span>
+                <h2>Growing Community, One Garden at a Time</h2>
+                <p class="lede">Our mission is to empower communities through sustainable urban gardening, education, and food security. Join us in creating greener, healthier neighbourhoods across Johannesburg.</p>
+                <div class="cta-row">
+                    <a class="btn" href="volunteer.html">Volunteer Now</a>
+                    <a class="btn secondary" href="donate.html">Donate</a>
+                </div>
+            </div>
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/garden-courtyard-480.jpg">
+                <source media="(max-width: 1024px)" srcset="images/garden-courtyard-800.jpg">
+                <img src="images/garden-courtyard-1200.jpg" alt="Lush community garden courtyard filled with citrus trees and a stone path">
+            </picture>
+        </div>
+
+        <!-- Programs: card grid using CSS Grid -->
+        <section aria-labelledby="programs-heading">
+            <h2 id="programs-heading">Our Programs</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Urban Farming Workshops</h3>
+                    <p>Hands-on sessions teaching residents how to grow vegetables and herbs in small urban spaces.</p>
+                </div>
+                <div class="card">
+                    <h3>Composting &amp; Sustainability</h3>
+                    <p>Learn how to compost kitchen waste and turn it into nutrient-rich soil for the garden.</p>
+                </div>
+                <div class="card">
+                    <h3>Nutrition Education</h3>
+                    <p>Workshops on healthy eating and using garden produce in everyday meals.</p>
+                </div>
+            </div>
+            <a class="btn secondary" href="projects.html">View All Projects</a>
+        </section>
+
+        <!-- Blog preview -->
+        <section aria-labelledby="blog-heading">
+            <h2 id="blog-heading">Latest Blog Posts</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h4><a href="blog.html#post1">5 Easy Vegetables to Grow at Home</a></h4>
+                    <p>Discover simple vegetables you can grow in small urban gardens, including spinach, tomatoes, and herbs.</p>
+                </div>
+                <div class="card">
+                    <h4><a href="blog.html#post2">Composting 101</a></h4>
+                    <p>Reduce waste and feed your garden with a simple home composting routine.</p>
+                </div>
+                <div class="card">
+                    <h4><a href="blog.html#post3">Volunteer Spotlight: Meet Sarah</a></h4>
+                    <p>Sarah has been volunteering with GreenReach for two years, teaching sustainable gardening practices.</p>
+                </div>
+            </div>
+            <a class="btn secondary" href="blog.html">Read More</a>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER: copyright ============ -->
+    <footer class="site-footer">
+        <p>&copy; 2025 GreenReach Community Garden. All rights reserved.</p>
+    </footer>
+</body>
+</html>

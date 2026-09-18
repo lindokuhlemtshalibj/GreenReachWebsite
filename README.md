@@ -1,22 +1,20 @@
-# GreenReachWebsite
-
 # GreenReach Community Garden Website
 
 ## Project Title
-GreenReach Community Garden — Non-Profit Website (WEDE5020 Part 1)
+GreenReach Community Garden — Non-Profit Website (WEDE5020 Portfolio of Evidence)
 
 ## Student Information
-- **Name:** Lindokuhle Mtshali
+- **Name:** Lindo
 - **Student Number:** ST10233093
 - **Module:** WEDE5020 (Web Development Introduction)
-
+- **Institution:** IIE
 
 ## Project Overview
-GreenReach Community Garden is a Johannesburg-based non-profit initiative promoting urban agriculture, food security, and community wellness. This repository contains the front-end website built for GreenReach as part of the WEDE5020 Portfolio of Evidence (POE). The site gives the organisation an online presence to recruit volunteers, collect donations, and share knowledge with the community, replacing their current reliance on a single Facebook page.
+GreenReach Community Garden is a Johannesburg-based non-profit initiative promoting urban agriculture, food security, and community wellness. This repository contains the front-end website built for GreenReach as part of the WEDE5020 Portfolio of Evidence (POE). The site gives the organisation an online presence to recruit volunteers, collect donations, and share knowledge with the community.
 
 ## Website Goals and Objectives
 - Increase volunteer sign-ups through a dedicated volunteer form
-- Grow donations via an online giving page
+- Grow donations via an online giving page with clear donation tiers
 - Share blog content such as gardening tips and success stories
 - Showcase upcoming community events and workshops
 - Provide clear contact information and locations for two garden sites
@@ -25,12 +23,14 @@ GreenReach Community Garden is a Johannesburg-based non-profit initiative promot
 
 ## Key Features and Functionality
 - Responsive 8-page website: Home, About Us, Projects, Blog, Volunteer, Donate, Events, Contact
-- Home page image slider showcasing the garden and community
-- Volunteer sign-up form and Donation form with client-side validation
-- Events page presenting upcoming workshops in a structured table
-- Contact page with an embedded map for two garden locations and an enquiry form
-- Semantic HTML5 structure (`header`, `nav`, `main`, `section`, `footer`) throughout
-- Mobile-friendly responsive navigation and layout
+- External stylesheet (`css/style.css`) linked consistently across every page
+- CSS custom properties (variables) for a consistent colour scheme and typography scale
+- Flexbox-based layout system: hero sections, card grids, two-column layouts, and image galleries all built with `display: flex`, `flex-wrap`, `justify-content`, and `align-items`
+- Decorative styling: colour, background-colour, border, and box-shadow on cards, with `:hover`, `:focus`, and `:active` states on all links, buttons, and form fields
+- Responsive design with two breakpoints (tablet ≤1024px, mobile ≤600px) adjusting layout, typography scale, navigation (stacks vertically on mobile), and images
+- Responsive images using the `<picture>` element with `<source media>` on the homepage hero, and `srcset`/`sizes` attributes on the Projects gallery, serving three resolutions (480w / 800w / 1200w) per image
+- Real embedded map with two garden locations (Johannesburg CBD and Soweto) on the Contact page
+- Volunteer sign-up form, donation tiers, and enquiry form with client-side required-field validation
 
 ## Timeline and Milestones
 | Milestone | Duration | Date Estimate |
@@ -44,7 +44,10 @@ GreenReach Community Garden is a Johannesburg-based non-profit initiative promot
 | Final tweaks & deployment | 0.5 week | Week 8 |
 
 ## Part 1 Details
-Part 1 delivers the approved project proposal, the researched content for the site, the initial sitemap, and the first working set of HTML/CSS/JS files pushed to this repository with a clear `css/`, `js/`, and `images/` folder structure. Part 2 and Part 3 will build on this foundation with expanded styling, JavaScript interactivity, and final content/testing (details to follow in future submissions/edits).
+Part 1 delivered the approved project proposal, researched content, the initial sitemap, and the first working set of HTML/CSS/JS files pushed to this repository with a `css/`, `js/`, and `images/` folder structure.
+
+## Part 2 Details
+Part 2 focused on CSS styling for the desktop solution and responsive design for tablet and mobile. This included building a full external stylesheet (reset, colour scheme, typography scale, layout system), applying decorative styling with interactive pseudo-classes, and implementing responsive layout, typography, navigation, and image adjustments across two breakpoints. Part 3 will add JavaScript interactivity, further testing, and final refinements.
 
 ## Sitemap
 ```
@@ -70,11 +73,39 @@ Home
     └── Contact Form
 ```
 
+## Screenshot Evidence: Responsive Testing
+Screenshots below confirm the layout adjusts correctly across desktop, tablet, and mobile screen sizes. Captured from the live pages using browser responsive testing tools.
+
+| Page | Desktop (browser window) | Tablet (630px viewport) | Mobile (375px viewport) |
+|---|---|---|---|
+| Homepage | `screenshots/homepage-desktop.png` | `screenshots/homepage-tablet-630px.png` | `screenshots/homepage-mobile-375px.png` |
+| Projects (image gallery) | `screenshots/projects-desktop.png` | `screenshots/projects-tablet-630px.png` | `screenshots/projects-mobile-375px.png` |
+
+Observed behaviour:
+- **Desktop:** hero section and card rows display side-by-side in multiple columns; navigation is a horizontal bar.
+- **Tablet:** hero stacks into a single column; card rows reflow to two columns.
+- **Mobile:** navigation stacks vertically; all cards, images, and buttons go full-width single column; heading sizes reduce for readability.
+
 ## Changelog
 - **v0.1 (Part 1):** Initial sitemap and content research completed; first working HTML/CSS/JS pages pushed with semantic structure, navigation, and a two-location contact map.
+- **v0.2 (Part 1 feedback fixes, actioned in Part 2):**
+  - Added the two missing low-fidelity wireframes (homepage and volunteer/donate form) to the Part 1 proposal document.
+  - Redrew both sitemap diagrams to fix an overlapping-label rendering bug in the original images.
+  - Restructured the `public_html` folder into `css/`, `js/`, and `images/` subfolders on every page for a consistent, well-organised file structure.
+  - Replaced the "map placeholder" text on the Contact page with a real embedded map showing two garden locations, as required by the original brief.
+- **v0.3 (Part 2):**
+  - Built the full external stylesheet (`css/style.css`): CSS reset, CSS custom properties for the colour scheme, a rem-based typography scale, and a Flexbox-based layout system (hero, card grids, two-column sections, image gallery).
+  - Added decorative styling (colour, background-colour, border, box-shadow) to all cards and buttons, with `:hover`, `:focus`, and `:active` states on every interactive element for accessibility and usability.
+  - Implemented two responsive breakpoints (tablet ≤1024px, mobile ≤600px) adjusting layout, typography, and navigation.
+  - Added responsive images: a `<picture>` element with multiple `<source media>` breakpoints on the homepage hero, and `srcset`/`sizes` attributes serving three resolutions on the Projects gallery.
+  - Sourced and added new site imagery: two raised-bed garden photos and a garden courtyard photo, all free of identifiable people to avoid using real individuals' photos without consent on a public-facing NPO site.
+  - Fixed a broken stylesheet/script path inconsistency between pages (`donate.html` and `volunteer.html` previously pointed to `css/style.css` while other pages used a flat path).
+  - Expanded thin pages (`donate.html` previously had almost no content) with donation tiers and additional copy.
 
 ## References
-- Nielsen, J. (2020) *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. Available at: https://www.nngroup.com/articles/ten-usability-heuristics/ (Accessed: 16 August 2026).
-- Interaction Design Foundation (2023) *The Basics of User Experience (UX) Design*. Available at: https://www.interaction-design.org/literature/topics/ux-design (Accessed: 16 August 2026).
-- Creative Commons (2023) *Free-to-use images and icons*. Available at: https://creativecommons.org (Accessed: 16 August 2026).
-- Statista (2022) *Urban agriculture participation in South Africa*. Available at: https://www.statista.com/ (Accessed: 16 August 2026).
+- Nielsen, J. (2020) *10 Usability Heuristics for User Interface Design*. Nielsen Norman Group. Available at: https://www.nngroup.com/articles/ten-usability-heuristics/ (Accessed: 26 July 2025).
+- Interaction Design Foundation (2023) *The Basics of User Experience (UX) Design*. Available at: https://www.interaction-design.org/literature/topics/ux-design (Accessed: 26 July 2025).
+- Creative Commons (2023) *Free-to-use images and icons*. Available at: https://creativecommons.org (Accessed: 26 July 2025).
+- MDN Web Docs (2024) *CSS Flexible Box Layout*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout (Accessed: 15 September 2026).
+- MDN Web Docs (2024) *Responsive images*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images (Accessed: 15 September 2026).
+- W3Schools (2024) *CSS Media Queries*. Available at: https://www.w3schools.com/css/css_rwd_mediaqueries.asp (Accessed: 15 September 2026).

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+  =========================================================
+  GreenReach Community Garden Website
+  Student: ST10233093 | Module: WEDE5020
+  Page: projects.html
+  =========================================================
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore GreenReach Community Garden's projects: urban farming workshops, composting, nutrition classes, and volunteer garden plots.">
+    <title>Projects - GreenReach Community Garden</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ============ HEADER: site branding + main navigation ============ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <img src="images/logo.png" alt="GreenReach Community Garden logo">
+                <h1>GreenReach Community Garden</h1>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ MAIN: page-specific content ============ -->
+    <main>
+        <h2>Our Projects &amp; Programs</h2>
+        <p class="lede">From raised-bed vegetable plots to community workshops, every GreenReach project is designed to build food security and bring neighbours together.</p>
+
+        <!-- Responsive image gallery: srcset + sizes for different resolutions -->
+        <div class="gallery-grid">
+            <img src="images/raised-beds-1-800.jpg"
+                 srcset="images/raised-beds-1-480.jpg 480w, images/raised-beds-1-800.jpg 800w, images/raised-beds-1-1200.jpg 1200w"
+                 sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                 alt="Raised vegetable garden beds with tomatoes, lettuce, and peppers">
+            <img src="images/raised-beds-2-800.jpg"
+                 srcset="images/raised-beds-2-480.jpg 480w, images/raised-beds-2-800.jpg 800w, images/raised-beds-2-1200.jpg 1200w"
+                 sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                 alt="Rows of raised garden beds with peppers and lettuce under a drip-irrigation line">
+            <img src="images/garden-courtyard-800.jpg" alt="Garden courtyard pathway lined with fruit trees">
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Urban Farming Workshops</h3>
+                <p>Hands-on sessions teaching residents how to grow vegetables and herbs in small urban spaces.</p>
+            </div>
+            <div class="card">
+                <h3>Composting &amp; Sustainability</h3>
+                <p>Learn how to compost kitchen waste and turn it into nutrient-rich soil for the garden.</p>
+            </div>
+            <div class="card">
+                <h3>Community Nutrition Classes</h3>
+                <p>Workshops on healthy eating and using garden produce in daily meals.</p>
+            </div>
+            <div class="card">
+                <h3>Volunteer Garden Plots</h3>
+                <p>Community members can manage a small garden plot and contribute to local food security.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ FOOTER: copyright ============ -->
+    <footer class="site-footer">
+        <p>&copy; 2025 GreenReach Community Garden. All rights reserved.</p>
+    </footer>
+</body>
+</html>
