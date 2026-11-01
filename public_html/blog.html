@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+  =========================================================
+  GreenReach Community Garden Website
+  Student: ST10233093 | Module: WEDE5020 | Part 3 (Final POE)
+  Page: blog.html
+  =========================================================
+-->
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Tips and Stories | GreenReach Blog</title>
+    <meta name="description" content="Read practical gardening tips, composting guides and community stories from GreenReach, and search our articles by topic.">
+    <meta name="keywords" content="gardening tips Johannesburg, composting guide, water-wise gardening, grow vegetables at home, community garden stories, healthy recipes">
+    <meta name="author" content="GreenReach Community Garden">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Johannesburg">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="canonical" href="https://greenreach-garden-jhb.netlify.app/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GreenReach Community Garden">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Gardening Tips and Stories | GreenReach Blog">
+    <meta property="og:description" content="Read practical gardening tips, composting guides and community stories from GreenReach, and search our articles by topic.">
+    <meta property="og:url" content="https://greenreach-garden-jhb.netlify.app/blog.html">
+    <meta property="og:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GreenReach Community Garden logo beside raised vegetable beds">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gardening Tips and Stories | GreenReach Blog">
+    <meta name="twitter:description" content="Read practical gardening tips, composting guides and community stories from GreenReach, and search our articles by topic.">
+    <meta name="twitter:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <noscript><style>.nav-toggle{display:none !important}.main-nav ul{display:flex !important}</style></noscript>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============ HEADER: site branding + main navigation ============ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="GreenReach Community Garden - home page">
+                <img src="images/greenreach-community-garden-logo.png" alt="GreenReach Community Garden logo" width="160" height="96">
+                <span class="brand-name">GreenReach Community Garden</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="nav-toggle-label">Menu</span>
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" aria-current="page">Blog</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ MAIN: page-specific content ============ -->
+    <main id="main-content" class="container" tabindex="-1">
+
+        <header class="page-intro">
+            <h1>Gardening Tips and Community Stories</h1>
+            <p class="lede">Practical advice for growing food in the city, plus news from our gardens. Search by keyword or pick a category.</p>
+        </header>
+
+        <section class="toolbar panel" aria-label="Search and filter articles">
+            <div class="field search-field">
+                <label for="blog-search">Search articles</label>
+                <input type="search" id="blog-search" placeholder="Try: compost, water or tomatoes" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="blog-sort">Sort by</label>
+                <select id="blog-sort">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="blog-categories" class="chip-row" role="group" aria-label="Filter articles by category"></div>
+        <div class="result-bar">
+            <p id="blog-count" class="result-count" aria-live="polite"></p>
+            <button id="blog-clear" class="btn small secondary" type="button" hidden>Clear search and filters</button>
+        </div>
+
+        <div id="blog-list" class="blog-grid"></div>
+        <noscript>
+            <p>Please enable JavaScript to search and read our articles. Recent titles:</p>
+            <ul>
+                <li><strong>5 Easy Vegetables to Grow at Home</strong> (2026-10-12): Short on space? These five vegetables thrive in containers and small beds across the Highveld.</li>
+                <li><strong>Composting 101: Reduce Waste and Feed Your Garden</strong> (2026-10-05): Turn kitchen scraps and garden waste into dark, crumbly compost with a simple home routine.</li>
+                <li><strong>Volunteer Spotlight: Meet Sarah, Our Garden Mentor</strong> (2026-09-28): Sarah has volunteered with GreenReach for two years, teaching sustainable gardening to neighbours of every age.</li>
+                <li><strong>Water-Wise Gardening in the Dry Season</strong> (2026-09-14): Simple ways to keep plants healthy while using less water, from mulching to drip irrigation.</li>
+                <li><strong>From Garden to Plate: Three Simple Meals</strong> (2026-09-02): Easy, affordable recipes that make the most of fresh garden vegetables and leafy greens.</li>
+                <li><strong>How Our Soweto Satellite Garden Started</strong> (2026-08-18): What began as one donated plot in Orlando West is now a second GreenReach garden feeding local families.</li>
+            </ul>
+        </noscript>
+    </main>
+
+    <!-- ============ FOOTER: contact, links, sharing, copyright ============ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-title">GreenReach Community Garden</p>
+                <address>
+                    Main Community Garden: 142 Bree Street, Johannesburg, 2001<br>
+                    Soweto Satellite Garden: 58 Vilakazi Street, Orlando West, Soweto, 1804<br>
+                    Email: <a href="mailto:info@greenreach.example.org">info@greenreach.example.org</a><br>
+                    Phone: <a href="tel:+27115551234">+27&nbsp;11&nbsp;555&nbsp;1234</a>
+                </address>
+            </div>
+            <nav aria-label="Footer navigation">
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="donate.html">Donate</a></li><li><a href="events.html">Events</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul>
+            </nav>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fblog.html" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fblog.html&amp;text=GreenReach%20Community%20Garden" target="_blank" rel="noopener noreferrer">X</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/?text=GreenReach%20Community%20Garden%20https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fblog.html" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fblog.html" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenReach Community Garden. All rights reserved.</p>
+            <p class="demo-note">GreenReach is a fictional organisation created for a WEDE5020 web development college project. The addresses, phone number, email address and banking details on this site are for demonstration only.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top of page">Top</button>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/blog.js" defer></script>
+</body>
+</html>
