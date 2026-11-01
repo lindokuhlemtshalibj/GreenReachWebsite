@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+  =========================================================
+  GreenReach Community Garden Website
+  Student: ST10233093 | Module: WEDE5020 | Part 3 (Final POE)
+  Page: contact.html
+  =========================================================
+-->
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Garden Locations | GreenReach Johannesburg</title>
+    <meta name="description" content="Contact GreenReach Community Garden, find our Johannesburg CBD and Soweto garden locations on an interactive map, and send us a message.">
+    <meta name="keywords" content="contact GreenReach, community garden Johannesburg address, Soweto garden location, garden map, email GreenReach">
+    <meta name="author" content="GreenReach Community Garden">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Johannesburg">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="canonical" href="https://greenreach-garden-jhb.netlify.app/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GreenReach Community Garden">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Contact and Garden Locations | GreenReach Johannesburg">
+    <meta property="og:description" content="Contact GreenReach Community Garden, find our Johannesburg CBD and Soweto garden locations on an interactive map, and send us a message.">
+    <meta property="og:url" content="https://greenreach-garden-jhb.netlify.app/contact.html">
+    <meta property="og:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GreenReach Community Garden logo beside raised vegetable beds">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact and Garden Locations | GreenReach Johannesburg">
+    <meta name="twitter:description" content="Contact GreenReach Community Garden, find our Johannesburg CBD and Soweto garden locations on an interactive map, and send us a message.">
+    <meta name="twitter:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <noscript><style>.nav-toggle{display:none !important}.main-nav ul{display:flex !important}</style></noscript>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "GreenReach Community Garden",
+  "url": "https://greenreach-garden-jhb.netlify.app/",
+  "logo": "https://greenreach-garden-jhb.netlify.app/images/greenreach-community-garden-logo-large.png",
+  "image": "https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg",
+  "description": "A Johannesburg non-profit that grows food security through community gardens, urban farming workshops, composting classes and volunteer programmes.",
+  "email": "info@greenreach.example.org",
+  "telephone": "+27 11 555 1234",
+  "areaServed": {
+    "@type": "City",
+    "name": "Johannesburg"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "142 Bree Street",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "postalCode": "2001",
+    "addressCountry": "ZA"
+  },
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Main Community Garden",
+      "address": "142 Bree Street, Johannesburg, 2001",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2041,
+        "longitude": 28.0473
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Soweto Satellite Garden",
+      "address": "58 Vilakazi Street, Orlando West, Soweto, 1804",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2379,
+        "longitude": 27.9073
+      }
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "info@greenreach.example.org",
+    "telephone": "+27 11 555 1234",
+    "areaServed": "ZA",
+    "availableLanguage": [
+      "English"
+    ]
+  }
+}
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============ HEADER: site branding + main navigation ============ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="GreenReach Community Garden - home page">
+                <img src="images/greenreach-community-garden-logo.png" alt="GreenReach Community Garden logo" width="160" height="96">
+                <span class="brand-name">GreenReach Community Garden</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="nav-toggle-label">Menu</span>
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ MAIN: page-specific content ============ -->
+    <main id="main-content" class="container" tabindex="-1">
+
+        <header class="page-intro">
+            <h1>Contact GreenReach and Find Our Gardens</h1>
+            <p class="lede">We would love to hear from you. Send us a message, call us, or visit one of our two Johannesburg gardens.</p>
+        </header>
+
+        <section class="panel reveal" aria-labelledby="info-heading">
+            <h2 id="info-heading">Contact Information</h2>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:info@greenreach.example.org">info@greenreach.example.org</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+27115551234">+27&nbsp;11&nbsp;555&nbsp;1234</a></li>
+                <li><strong>Garden hours:</strong> see each location below</li>
+            </ul>
+        </section>
+
+        <section class="panel reveal" aria-labelledby="map-heading">
+            <h2 id="map-heading">Our Garden Locations</h2>
+            <div class="map-controls" role="group" aria-label="Choose a garden to show on the map">
+                <button type="button" class="chip" data-map-focus="all" aria-pressed="true">Both gardens</button>
+                <button type="button" class="chip" data-map-focus="main" aria-pressed="false">Main Community Garden</button>
+                <button type="button" class="chip" data-map-focus="soweto" aria-pressed="false">Soweto Satellite Garden</button>
+                <button type="button" class="btn small" id="map-near-me">Find my nearest garden</button>
+            </div>
+            <p id="map-status" class="map-status" role="status" aria-live="polite"></p>
+            <div id="map" class="map" role="region" aria-label="Interactive map showing the two GreenReach garden locations">
+                <noscript><p>The interactive map needs JavaScript. Our gardens are at 142 Bree Street, Johannesburg and 58 Vilakazi Street, Orlando West, Soweto.</p></noscript>
+            </div>
+            <p class="map-credit">Map data from OpenStreetMap contributors. Locations are approximate.</p>
+            <div class="cards-grid location-cards">
+                <article class="card">
+                    <h3>Main Community Garden</h3>
+                    <address>142 Bree Street, Johannesburg, 2001</address>
+                    <p>Open: Monday to Saturday, 08:00 - 17:00</p>
+                </article>
+                <article class="card">
+                    <h3>Soweto Satellite Garden</h3>
+                    <address>58 Vilakazi Street, Orlando West, Soweto, 1804</address>
+                    <p>Open: Tuesday to Saturday, 08:00 - 16:00</p>
+                </article>
+            </div>
+        </section>
+
+        <div id="contact-form-wrap">
+            <section class="panel reveal" aria-labelledby="message-heading">
+                <h2 id="message-heading">Send Us a Message</h2>
+                <noscript><p class="note">This form needs JavaScript. Please enable it, or email us at <a href="mailto:info@greenreach.example.org">info@greenreach.example.org</a>.</p></noscript>
+                <form id="contact-form" class="form" method="post" action="#" novalidate>
+                    <div id="contact-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+                    <p class="required-note">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+
+                    <fieldset class="form-section">
+                        <legend>About you</legend>
+            <div class="field " data-field="contactName">
+                <label for="contactName">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="contactName" required autocomplete="name" minlength="2" maxlength="60" aria-describedby="contactName-error">
+                <p class="field-error" id="contactName-error"></p>
+            </div>
+            <div class="field " data-field="contactEmail">
+                <label for="contactEmail">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="contactEmail" name="contactEmail" required autocomplete="email" maxlength="254" aria-describedby="contactEmail-error">
+                <p class="field-error" id="contactEmail-error"></p>
+            </div>
+            <div class="field " data-field="contactPhone">
+                <label for="contactPhone">Phone number <span class="optional">(optional)</span></label>
+                <input type="tel" id="contactPhone" name="contactPhone" autocomplete="tel" inputmode="tel" maxlength="20" aria-describedby="contactPhone-hint contactPhone-error">
+                <p class="field-hint" id="contactPhone-hint">South African format, for example 082 123 4567.</p>
+                <p class="field-error" id="contactPhone-error"></p>
+            </div>
+            <fieldset class="field radio-group" data-field="replyMethod">
+                <legend>How should we reply? <span class="req" aria-hidden="true">*</span></legend>
+                <div class="radio-row">
+                    <label class="radio"><input type="radio" id="replyMethod-email" name="replyMethod" value="email" required> <span>By email</span></label>
+                    <label class="radio"><input type="radio" id="replyMethod-phone" name="replyMethod" value="phone" required> <span>By phone</span></label>
+                </div>
+                <p class="field-error" id="replyMethod-error"></p>
+            </fieldset>
+                    </fieldset>
+
+                    <fieldset class="form-section">
+                        <legend>Your message</legend>
+            <div class="field" data-field="messageType">
+                <label for="messageType">Type of message <span class="req" aria-hidden="true">*</span></label>
+                <select id="messageType" name="messageType" required aria-describedby="messageType-error"><option value="">Choose an option</option><option value="general">General question</option><option value="event">Question about an event</option><option value="feedback">Feedback or compliment</option><option value="partnership">Partnership or media</option><option value="problem">Report a problem</option></select>
+                <p class="field-error" id="messageType-error"></p>
+            </div>
+            <div class="field " data-field="contactSubject">
+                <label for="contactSubject">Subject <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="contactSubject" name="contactSubject" required maxlength="80" minlength="5" aria-describedby="contactSubject-hint contactSubject-error">
+                <p class="field-hint" id="contactSubject-hint">Between 5 and 80 characters.</p>
+                <p class="field-error" id="contactSubject-error"></p>
+            </div>
+                        <div class="field" data-field="contactMessage">
+                            <label for="contactMessage">Message <span class="req" aria-hidden="true">*</span></label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required minlength="20" maxlength="800" aria-describedby="contactMessage-counter contactMessage-error"></textarea>
+                            <p class="char-counter" id="contactMessage-counter" data-counter-for="contactMessage" data-max="800"></p>
+                            <p class="field-error" id="contactMessage-error"></p>
+                        </div>
+                        <div class="field checkbox-field" data-field="contactConsent">
+                            <label class="checkbox"><input type="checkbox" id="contactConsent" name="contactConsent" value="yes" required aria-describedby="contactConsent-error"> <span>I agree that my details may be used to reply to this message. <span class="req" aria-hidden="true">*</span></span></label>
+                            <p class="field-error" id="contactConsent-error"></p>
+                        </div>
+                    </fieldset>
+
+                    <p class="note">When you send, your message is written into an email addressed to GreenReach and opened in your email app, so it is sent from your own account.</p>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Send message</button>
+                        <button type="reset" class="btn secondary">Clear form</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <p id="contact-status" class="status" role="status" aria-live="polite"></p>
+        <section id="email-ready" class="panel result" aria-live="polite" hidden></section>
+    </main>
+
+    <!-- ============ FOOTER: contact, links, sharing, copyright ============ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-title">GreenReach Community Garden</p>
+                <address>
+                    Main Community Garden: 142 Bree Street, Johannesburg, 2001<br>
+                    Soweto Satellite Garden: 58 Vilakazi Street, Orlando West, Soweto, 1804<br>
+                    Email: <a href="mailto:info@greenreach.example.org">info@greenreach.example.org</a><br>
+                    Phone: <a href="tel:+27115551234">+27&nbsp;11&nbsp;555&nbsp;1234</a>
+                </address>
+            </div>
+            <nav aria-label="Footer navigation">
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="donate.html">Donate</a></li><li><a href="events.html">Events</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul>
+            </nav>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fcontact.html" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fcontact.html&amp;text=GreenReach%20Community%20Garden" target="_blank" rel="noopener noreferrer">X</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/?text=GreenReach%20Community%20Garden%20https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fcontact.html" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fcontact.html" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenReach Community Garden. All rights reserved.</p>
+            <p class="demo-note">GreenReach is a fictional organisation created for a WEDE5020 web development college project. The addresses, phone number, email address and banking details on this site are for demonstration only.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top of page">Top</button>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="vendor/leaflet/leaflet.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</body>
+</html>
