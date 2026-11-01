@@ -4,10 +4,10 @@
 GreenReach Community Garden - Non-Profit Website (WEDE5020 Portfolio of Evidence, Final POE: Part 3)
 
 ## Student Information
-- **Name:** Lindo
+- **Name:** Lindokuhle Mtshali
 - **Student Number:** ST10233093
 - **Module:** WEDE5020 (Web Development Introduction)
-- **Institution:** IIE (Rosebank College)
+
 
 ## Live Website and Repository
 - **Live website (deployed on Netlify):** https://greenreach-garden-jhb.netlify.app/
