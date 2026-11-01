@@ -1,0 +1,9 @@
+# robots.txt for GreenReach Community Garden
+# Tells search engine crawlers which parts of the site they may visit.
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /404.html
+
+# Sitemap helps search engines find every page
+Sitemap: https://greenreach-garden-jhb.netlify.app/sitemap.xml
