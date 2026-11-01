@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+  =========================================================
+  GreenReach Community Garden Website
+  Student: ST10233093 | Module: WEDE5020 | Part 3 (Final POE)
+  Page: events.html
+  =========================================================
+-->
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardening Workshops and Events | GreenReach Johannesburg</title>
+    <meta name="description" content="Search upcoming gardening workshops, harvest days and community events at GreenReach gardens in Johannesburg CBD and Soweto.">
+    <meta name="keywords" content="gardening workshops Johannesburg, community events Soweto, composting class, harvest day, seedling swap, school holiday garden club">
+    <meta name="author" content="GreenReach Community Garden">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Johannesburg">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="canonical" href="https://greenreach-garden-jhb.netlify.app/events.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GreenReach Community Garden">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Gardening Workshops and Events | GreenReach Johannesburg">
+    <meta property="og:description" content="Search upcoming gardening workshops, harvest days and community events at GreenReach gardens in Johannesburg CBD and Soweto.">
+    <meta property="og:url" content="https://greenreach-garden-jhb.netlify.app/events.html">
+    <meta property="og:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GreenReach Community Garden logo beside raised vegetable beds">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gardening Workshops and Events | GreenReach Johannesburg">
+    <meta name="twitter:description" content="Search upcoming gardening workshops, harvest days and community events at GreenReach gardens in Johannesburg CBD and Soweto.">
+    <meta name="twitter:image" content="https://greenreach-garden-jhb.netlify.app/images/og-greenreach-community-garden.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <noscript><style>.nav-toggle{display:none !important}.main-nav ul{display:flex !important}</style></noscript>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ============ HEADER: site branding + main navigation ============ -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="GreenReach Community Garden - home page">
+                <img src="images/greenreach-community-garden-logo.png" alt="GreenReach Community Garden logo" width="160" height="96">
+                <span class="brand-name">GreenReach Community Garden</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="nav-toggle-label">Menu</span>
+                <span class="nav-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="events.html" aria-current="page">Events</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ MAIN: page-specific content ============ -->
+    <main id="main-content" class="container" tabindex="-1">
+
+        <header class="page-intro">
+            <h1>Gardening Workshops and Community Events</h1>
+            <p class="lede">Join us for hands-on workshops and community days at our Johannesburg CBD and Soweto gardens. Search, filter and sort to find the right event for you.</p>
+        </header>
+
+        <section class="toolbar panel" aria-label="Search and filter events">
+            <div class="field search-field">
+                <label for="events-search">Search events</label>
+                <input type="search" id="events-search" placeholder="Try: compost, kids or Soweto" autocomplete="off">
+            </div>
+            <div class="field">
+                <label for="events-category">Category</label>
+                <select id="events-category"><option value="all">All categories</option></select>
+            </div>
+            <div class="field">
+                <label for="events-location">Location</label>
+                <select id="events-location"><option value="all">All locations</option></select>
+            </div>
+            <div class="field">
+                <label for="events-sort">Sort by</label>
+                <select id="events-sort">
+                    <option value="date-asc">Date: soonest first</option>
+                    <option value="date-desc">Date: latest first</option>
+                    <option value="name">Name: A to Z</option>
+                    <option value="places">Most places left</option>
+                </select>
+            </div>
+            <label class="checkbox toolbar-check"><input type="checkbox" id="events-past"> <span>Include past events</span></label>
+        </section>
+
+        <div class="result-bar">
+            <p id="events-count" class="result-count" aria-live="polite"></p>
+            <button id="events-clear" class="btn small secondary" type="button" hidden>Clear search and filters</button>
+        </div>
+
+        <div id="events-list" class="event-list"></div>
+        <div class="more-row"><button id="events-more" class="btn secondary" type="button" hidden>Show more events</button></div>
+        <noscript>
+            <p>Please enable JavaScript to search events. Upcoming events:</p>
+            <ul>
+                <li><strong>Urban Farming Workshop</strong> - Saturday, 7 November 2026, 10:00 to 12:00, Main Community Garden</li>
+                <li><strong>Volunteer Induction Morning</strong> - Saturday, 7 November 2026, 09:00 to 10:00, Main Community Garden</li>
+                <li><strong>Composting Class</strong> - Saturday, 14 November 2026, 14:00 to 16:00, Main Community Garden</li>
+                <li><strong>Community Harvest Day</strong> - Saturday, 21 November 2026, 09:00 to 13:00, Soweto Satellite Garden</li>
+                <li><strong>Healthy Meals from the Garden</strong> - Saturday, 28 November 2026, 11:00 to 13:00, Soweto Satellite Garden</li>
+                <li><strong>Seedling Swap</strong> - Saturday, 5 December 2026, 10:00 to 12:00, Main Community Garden</li>
+                <li><strong>Summer Planting Day</strong> - Saturday, 12 December 2026, 08:00 to 12:00, Soweto Satellite Garden</li>
+                <li><strong>Year-End Garden Picnic</strong> - Saturday, 19 December 2026, 12:00 to 15:00, Main Community Garden</li>
+                <li><strong>Kids Garden Club</strong> - Saturday, 16 January 2027, 09:00 to 11:00, Soweto Satellite Garden</li>
+                <li><strong>Water-Wise Gardening Workshop</strong> - Saturday, 23 January 2027, 10:00 to 12:00, Main Community Garden</li>
+            </ul>
+        </noscript>
+
+        <p class="after-faq">New to GreenReach? Our <a href="volunteer.html">volunteer induction</a> takes place on the first Saturday of every month.</p>
+    </main>
+
+    <!-- ============ FOOTER: contact, links, sharing, copyright ============ -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <p class="footer-title">GreenReach Community Garden</p>
+                <address>
+                    Main Community Garden: 142 Bree Street, Johannesburg, 2001<br>
+                    Soweto Satellite Garden: 58 Vilakazi Street, Orlando West, Soweto, 1804<br>
+                    Email: <a href="mailto:info@greenreach.example.org">info@greenreach.example.org</a><br>
+                    Phone: <a href="tel:+27115551234">+27&nbsp;11&nbsp;555&nbsp;1234</a>
+                </address>
+            </div>
+            <nav aria-label="Footer navigation">
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="volunteer.html">Volunteer</a></li><li><a href="donate.html">Donate</a></li><li><a href="events.html">Events</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul>
+            </nav>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fevents.html" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fevents.html&amp;text=GreenReach%20Community%20Garden" target="_blank" rel="noopener noreferrer">X</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/?text=GreenReach%20Community%20Garden%20https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fevents.html" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fgreenreach-garden-jhb.netlify.app%2Fevents.html" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GreenReach Community Garden. All rights reserved.</p>
+            <p class="demo-note">GreenReach is a fictional organisation created for a WEDE5020 web development college project. The addresses, phone number, email address and banking details on this site are for demonstration only.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top of page">Top</button>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/events.js" defer></script>
+</body>
+</html>
