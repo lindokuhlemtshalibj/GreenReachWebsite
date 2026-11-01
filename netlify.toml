@@ -1,0 +1,3 @@
+# Netlify settings: publish the public_html folder as the website.
+[build]
+  publish = "public_html"
