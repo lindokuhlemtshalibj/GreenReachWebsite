@@ -1,0 +1,13 @@
+{
+    "volunteerSlots": {
+        "garden-care": { "saturday-morning": 0, "saturday-afternoon": 5, "weekday-afternoon": 7, "flexible": 10 },
+        "teaching":    { "saturday-morning": 3, "saturday-afternoon": 2, "weekday-afternoon": 4, "flexible": 6 },
+        "events":      { "saturday-morning": 4, "saturday-afternoon": 6, "weekday-afternoon": 2, "flexible": 8 },
+        "admin":       { "saturday-morning": 1, "saturday-afternoon": 3, "weekday-afternoon": 5, "flexible": 9 }
+    },
+    "sponsorSlots": {
+        "seed":     { "capacity": 50, "taken": 41 },
+        "bed":      { "capacity": 20, "taken": 17 },
+        "workshop": { "capacity": 12, "taken": 9 }
+    }
+}
